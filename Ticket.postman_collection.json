@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "1ff707bd-0dbb-4b12-addf-fa35708875cc",
+		"name": "Ticket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16846983"
+	},
+	"item": [
+		{
+			"name": "Create Ticket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzBiYWM3ZWRiOTAzNDAzNmYwNmE1MSIsImlhdCI6MTY4NTEwOTQ1Nn0.ibZnnhSlo2MFvr_renSsjBQWgEjhb72tZGAtnUmrm7Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numTickets\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/ticket/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"ticket",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tickets with Pagination (sort by recent)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzBiYWM3ZWRiOTAzNDAzNmYwNmE1MSIsImlhdCI6MTY4NTEwOTQ1Nn0.ibZnnhSlo2MFvr_renSsjBQWgEjhb72tZGAtnUmrm7Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/ticket/all?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"ticket",
+						"all"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Ticket",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzBiYWM3ZWRiOTAzNDAzNmYwNmE1MSIsImlhdCI6MTY4NTEwOTQ1Nn0.ibZnnhSlo2MFvr_renSsjBQWgEjhb72tZGAtnUmrm7Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/ticket/single/6470cd946a2bea1469ca94d4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"ticket",
+						"single",
+						"6470cd946a2bea1469ca94d4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Single Ticket",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzBiYWM3ZWRiOTAzNDAzNmYwNmE1MSIsImlhdCI6MTY4NTEwOTQ1Nn0.ibZnnhSlo2MFvr_renSsjBQWgEjhb72tZGAtnUmrm7Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/ticket/single/6470cd946a2bea1469ca94d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"ticket",
+						"single",
+						"6470cd946a2bea1469ca94d6"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -4,12 +4,14 @@ const { errorHandler, notFound } = require("./utils/errorHandler");
 const ticketRouter = require("./routes/ticketRoute");
 const Connection = require("./config/db");
 const userRouter = require("./routes/userRoute");
+const compression = require("compression");
 require("dotenv").config();
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(compression())
 
 Connection(process.env.MONGO_URI);
 
